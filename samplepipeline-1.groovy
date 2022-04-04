@@ -3,7 +3,7 @@ pipeline {
         stages {
           stage('Build') { 
             steps {
-              echo "Build Successfull"
+              git credentialsId: 'gitlab-ssh', url: 'https://github.com/github-prashant15/pipeline-repo.git'
             }
           }
           stage('Test') { 
